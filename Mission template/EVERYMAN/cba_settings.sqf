@@ -1,5 +1,6 @@
 /*
 The following settings are options available to mission makers, they are only given as reference and should only be enabled when specifically wanted.
+Some settings enable behaviour that is limited to defined cases per policy.
 To enable the setting, remove the "//" (comment marker) at the start of the lines following the feature you want to enable.
 */
 
@@ -10,10 +11,8 @@ To enable the setting, remove the "//" (comment marker) at the start of the line
 //force unitaf_tablet_Oops_NVG = "orbat_range";
 //force unitaf_tablet_Oops_NVG_Classname = "CUP_NVG_PVS15_Green";
 
-/* Artillery computer */
-//force ace_artillerytables_advancedCorrections = false;
+/* Enable Artillery Computer */
 //force ace_artillerytables_disableArtilleryComputer = false;
-//force ace_mk6mortar_airResistanceEnabled = false;
 //force ace_mk6mortar_useAmmoHandling = false;	
 
 /* Disable Crew Served Weapons */
