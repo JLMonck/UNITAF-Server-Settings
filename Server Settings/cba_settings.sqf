@@ -1281,32 +1281,32 @@ force force kat_pharma_weapon_sway_pervitin = true;
 
 // KAT - ADV Medical: Surgery
 force force kat_surgery_closedLocation = 0;
-force force kat_surgery_closedReduction_MedLevel = 0;
+force force kat_surgery_closedReduction_MedLevel = 1;
 force force kat_surgery_closedReductionFailChance = 10;
-force force kat_surgery_closedTime = 10;
-force force kat_surgery_compoundChance = 30;
-force force kat_surgery_enable_fracture = false;
+force force kat_surgery_closedTime = 15;
+force force kat_surgery_compoundChance = 0;
+force force kat_surgery_enable_fracture = true;
 force force kat_surgery_enable_selfCheckFracture = 1;
-force force kat_surgery_fractureCheck_MedLevel = 0;
-force force kat_surgery_fractureCheck_Time = 10;
-force force kat_surgery_incisionTime = 10;
-force force kat_surgery_intermediateTime = 8;
+force force kat_surgery_fractureCheck_MedLevel = 1;
+force force kat_surgery_fractureCheck_Time = 5;
+force force kat_surgery_incisionTime = 5;
+force force kat_surgery_intermediateTime = 5;
 force force kat_surgery_npwt_MedLevel = 2;
-force force kat_surgery_npwtLocation = 3;
+force force kat_surgery_npwtLocation = 0;
 force force kat_surgery_npwtTime = 20;
 force force kat_surgery_openTime = 15;
+force force kat_surgery_pericardialtapLocation = 0;
 force force kat_surgery_pericardialtap_MedLevel = 2;
-force force kat_surgery_pericardialtapLocation = 3;
 force force kat_surgery_pericardialtapTime = 8;
 force force kat_surgery_reboa_MedLevel = 2;
-force force kat_surgery_reboaLocation = 3;
+force force kat_surgery_reboaLocation = 0;
 force force kat_surgery_reboaTime = 8;
-force force kat_surgery_simpleChance = 15;
-force force kat_surgery_Surgery_ConsciousnessRequirement = 1;
-force force kat_surgery_surgicalAction_MedLevel = 0;
+force force kat_surgery_simpleChance = 60;
+force force kat_surgery_Surgery_ConsciousnessRequirement = 2;
+force force kat_surgery_surgicalAction_MedLevel = 2;
 force force kat_surgery_surgicalLocation = 0;
 force force kat_surgery_ultrasound_MedLevel = 2;
-force force kat_surgery_ultrasoundLocation = 3;
+force force kat_surgery_ultrasoundLocation = 0;
 force force kat_surgery_ultrasoundTime = 8;
 
 // KAT - ADV Medical: Vitals
@@ -1461,8 +1461,8 @@ force force TFAR_setting_externalIntercomWirelessHeadgear = "";
 force force TFAR_spectatorCanHearEnemyUnits = true;
 force force TFAR_spectatorCanHearFriendlies = true;
 force force TFAR_takingRadio = 0;
-force force TFAR_Teamspeak_Channel_Name = "OPS1 - In Operation (TFAR)";
-force force TFAR_Teamspeak_Channel_Password = "TFAR";
+force TFAR_Teamspeak_Channel_Name = "OPS1 - In Operation (TFAR)";
+force TFAR_Teamspeak_Channel_Password = "TFAR";
 force force TFAr_terrain_interception_coefficient = 7;
 force force TFAR_voiceCone = true;
 
@@ -1588,6 +1588,88 @@ crowsza_zeus_text_CBA_Setting_zeusTextLine3 = false;
 PDT_ENVG_ACE = false;
 PDT_ENVG_Blacklist = "";
 PDT_ENVG_Effect = "";
+
+// QTE ACE - Cargo
+force force qte_ace_cargo_difficulty = 2;
+force force qte_ace_cargo_enable = false;
+force force qte_ace_cargo_mustBeCompleted = false;
+force force qte_ace_cargo_noTimer = false;
+force force qte_ace_cargo_qteType = 1;
+force force qte_ace_cargo_resetUponIncorrectInput = false;
+force force qte_ace_cargo_tries = 3;
+
+// QTE ACE - Explosives
+force force qte_ace_explosives_difficulty = 4;
+force force qte_ace_explosives_enable = false;
+force force qte_ace_explosives_explodeOnFail = true;
+force force qte_ace_explosives_mustBeCompleted = false;
+force force qte_ace_explosives_noTimer = true;
+force force qte_ace_explosives_qteType = 0;
+force force qte_ace_explosives_resetUponIncorrectInput = true;
+force force qte_ace_explosives_tries = 1;
+
+// QTE ACE - Magazine Repack
+force force qte_ace_magazinerepack_difficulty = 1.47426;
+qte_ace_magazinerepack_enable = false;
+force force qte_ace_magazinerepack_mustBeCompleted = false;
+force force qte_ace_magazinerepack_noTimer = false;
+force force qte_ace_magazinerepack_qteType = 1;
+force force qte_ace_magazinerepack_resetUponIncorrectInput = true;
+force force qte_ace_magazinerepack_tries = 0;
+
+// QTE ACE - Main
+force force qte_ace_main_addedWords = "[]";
+qte_ace_main_arrowColorDown = [0.67,1,0.67,1];
+qte_ace_main_arrowColorLeft = [0.67,0.67,1,1];
+qte_ace_main_arrowColorRight = [1,1,0.67,1];
+qte_ace_main_arrowColorUp = [1,0.67,0.67,1];
+force force qte_ace_main_arrowStyle = "arrowsCharacters";
+force force qte_ace_main_bannedWords = "[""coolexample1"",""coolexample2""]";
+force force qte_ace_main_debug = false;
+force force qte_ace_main_maxLength = 500;
+force force qte_ace_main_pendingCharactersDim = true;
+force force qte_ace_main_qtePosition = 0;
+force force qte_ace_main_soundsCorrect = "ClickSoft";
+force force qte_ace_main_soundsLastTry = "vtolAlarm";
+force force qte_ace_main_soundsLose = "Simulation_Fatal";
+force force qte_ace_main_soundsWin = "3DEN_notificationDefault";
+force force qte_ace_main_soundsWrong = "addItemFailed";
+
+// QTE ACE - Medical
+force force qte_ace_medical_difficulty = 2.5;
+force force qte_ace_medical_enable = false;
+force force qte_ace_medical_mustBeCompleted = false;
+force force qte_ace_medical_noTimer = false;
+force force qte_ace_medical_qteType = 0;
+force force qte_ace_medical_resetUponIncorrectInput = false;
+force force qte_ace_medical_tries = 3;
+
+// QTE ACE - Overheating
+force force qte_ace_overheating_difficulty = 4;
+force force qte_ace_overheating_enable = false;
+force force qte_ace_overheating_mustBeCompleted = false;
+force force qte_ace_overheating_noTimer = true;
+force force qte_ace_overheating_qteType = 0;
+force force qte_ace_overheating_resetUponIncorrectInput = false;
+force force qte_ace_overheating_tries = 5;
+
+// QTE ACE - Rearm
+force force qte_ace_rearm_difficulty = 2;
+force force qte_ace_rearm_enable = false;
+force force qte_ace_rearm_mustBeCompleted = false;
+force force qte_ace_rearm_noTimer = false;
+force force qte_ace_rearm_qteType = 0;
+force force qte_ace_rearm_resetUponIncorrectInput = false;
+force force qte_ace_rearm_tries = 3;
+
+// QTE ACE - Repair
+force force qte_ace_repair_difficulty = 2;
+qte_ace_repair_enable = true;
+force force qte_ace_repair_mustBeCompleted = false;
+force force qte_ace_repair_noTimer = false;
+force force qte_ace_repair_qteType = 1;
+force force qte_ace_repair_resetUponIncorrectInput = true;
+force force qte_ace_repair_tries = 3;
 
 // Turret Enhanced
 force force Fat_Lurch_Grid = true;
