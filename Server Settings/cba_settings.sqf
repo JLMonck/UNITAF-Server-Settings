@@ -387,7 +387,7 @@ force force ace_medical_treatment_locationAdenosine = 0;
 force force ace_medical_treatment_locationEpinephrine = 0;
 force force ace_medical_treatment_locationIV = 0;
 force force ace_medical_treatment_locationMorphine = 0;
-force ace_medical_treatment_locationPAK = 3; //Allow mission override
+force force ace_medical_treatment_locationPAK = 3;
 force force ace_medical_treatment_locationsBoostTraining = true;
 force force ace_medical_treatment_locationSplint = 0;
 force force ace_medical_treatment_locationSurgicalKit = 0;
@@ -489,16 +489,16 @@ force force ace_repair_autoShutOffEngineWhenStartingRepair = true;
 force force ace_repair_consumeItem_toolKit = 0;
 force force ace_repair_displayTextOnRepair = true;
 force force ace_repair_enabled = true;
-force force ace_repair_engineerSetting_fullRepair = 2;
-force force ace_repair_engineerSetting_repair = 1;
+force force ace_repair_engineerSetting_fullRepair = 1;
+force force ace_repair_engineerSetting_repair = 0;
 force force ace_repair_engineerSetting_wheel = 0;
-force force ace_repair_fullRepairLocation = 2;
+force force ace_repair_fullRepairLocation = 3;
 force force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_locationsBoostTraining = true;
 force force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_miscRepairTime = 15;
 force force ace_repair_patchWheelEnabled = 1;
-force force ace_repair_patchWheelLocation = ["ground"];
+force force ace_repair_patchWheelLocation = ["ground", "vehicle"];
 force force ace_repair_patchWheelMaximumRepair = 0;
 force force ace_repair_patchWheelRequiredItems = [];
 force force ace_repair_patchWheelTime = 2.5;
@@ -793,7 +793,7 @@ diwako_dui_compass_icon_scale = 1;
 diwako_dui_compass_opacity = 1;
 diwako_dui_compass_style = ["\z\diwako_dui\addons\radar\UI\compass_styles\standard\compass_limited.paa","\z\diwako_dui\addons\radar\UI\compass_styles\standard\compass.paa"];
 diwako_dui_compassRange = 35;
-diwako_dui_compassRefreshrate = 0;
+diwako_dui_compassRefreshrate = 5;
 diwako_dui_dir_showMildot = false;
 diwako_dui_dir_size = 1.25;
 diwako_dui_distanceWarning = 3;
@@ -921,7 +921,7 @@ force force grad_trenches_functions_vehicleTrenchBuildSpeed = 5;
 
 // Immersive Animations
 force force WBK_IA_C = true;
-force force WBK_IA_Map = false;
+force WBK_IA_Map = false; //Allow clientside enable
 force force WBK_IA_MapTime = false;
 force force WBK_IA_RAD = true;
 force force WBK_IA_TALK = false;
@@ -940,7 +940,7 @@ IMS_ShowHealthHud = true;
 force force IMS_AddKnifeToUnit = false;
 force force IMS_BayonetDistance = "6";
 force force IMS_BayonetOnAI = false;
-force force IMS_BluntWeapon = false;
+force force IMS_BluntWeapon = true;
 force force IMS_CustomAIHEALTH = "2";
 force force IMS_DamageMultiplierParam = "1";
 force force IMS_DamageMultiplierParamPlayer = "1";
@@ -957,7 +957,7 @@ force force IMS_WBK_CUSTOMCAMSERVER = false;
 force force IMS_WBK_MAINFPTP = true;
 
 // KAT - ADV Medical: Airway
-force force kat_airway_Accuvac_time = 6.55;
+force force kat_airway_Accuvac_time = 6;
 force force kat_airway_autoTriage = false;
 force force kat_airway_block_headTurning_ifAirwayItem = false;
 force force kat_airway_CancelRecoveryPosition_Time = 6;
@@ -970,8 +970,8 @@ force force kat_airway_Hyperextend_Time = 3;
 force force kat_airway_Larynxtubus_time = 3;
 force force kat_airway_medLvl_Accuvac = 2;
 force force kat_airway_medLvl_Guedeltubus = 1;
-force force kat_airway_medLvl_Larynxtubus = 2;
-force force kat_airway_medLvl_Suction = 1;
+force force kat_airway_medLvl_Larynxtubus = 1;
+force force kat_airway_medLvl_Suction = 2;
 force force kat_airway_occlusion_cooldownPeriod = 6;
 force force kat_airway_occlusion_repeatTimer = 60;
 force force kat_airway_probability_headturning = 15;
@@ -981,8 +981,8 @@ force force kat_airway_RecoveryPosition_Time = 6;
 force force kat_airway_RecoveryPosition_TimeToDrain = 10;
 force force kat_airway_ReusableAirwayItems = false;
 force force kat_airway_string_exit = "keko_wasPunched";
-force force kat_airway_Suction_reuse = false;
-force force kat_airway_Suction_time = 12;
+force force kat_airway_Suction_reuse = true;
+force force kat_airway_Suction_time = 10;
 
 // KAT - ADV Medical: Breathing
 force force kat_breathing_advPtxChance = 0;
@@ -1013,7 +1013,7 @@ force force kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
 force force kat_breathing_medLvl_NasalCannula = 0;
 force force kat_breathing_medLvl_PocketBVM = 0;
 force force kat_breathing_medLvl_Pulseoximeter = 1;
-force force kat_breathing_mildValue = 75;
+force force kat_breathing_mildValue = 70;
 force force kat_breathing_NasalCannula_time = 3;
 force force kat_breathing_paco2Active = false;
 force force kat_breathing_PneumothoraxAlwaysVisible = false;
@@ -1023,18 +1023,20 @@ force force kat_breathing_pneumothoraxDamageThreshold = 0;
 force force kat_breathing_pneumothoraxDamageThreshold_TakenDamage = false;
 force force kat_breathing_PortableOxygenTank_RefillTime = 5;
 force force kat_breathing_PulseOximeter_SpO2Warning = 78;
-force force kat_breathing_severeValue = 66;
-force force kat_breathing_showCyanosis = false;
+force force kat_breathing_severeValue = 50;
+force force kat_breathing_showCyanosis = true;
 force force kat_breathing_showPneumothorax_dupe = true;
 force force kat_breathing_slightValue = 90;
 force force kat_breathing_SpO2_cardiacActive = false;
 force force kat_breathing_SpO2_cardiacValue = 75;
+force force kat_breathing_SpO2_CPR_Rise = true;
+force force kat_breathing_SpO2_CPR_RiseMultiplier = 1;
 force force kat_breathing_SpO2_dieActive = true;
 force force kat_breathing_SpO2_dieValue = 40;
 force force kat_breathing_SpO2_MultiplyNegative = 1.2;
 force force kat_breathing_SpO2_MultiplyPositive = 1;
 force force kat_breathing_SpO2_perfusion = true;
-force force kat_breathing_SpO2_PerfusionMultiplier = 0;
+force force kat_breathing_SpO2_PerfusionMultiplier = 0.66;
 force force kat_breathing_SpO2_unconscious = 75;
 force force kat_breathing_Stable_spo2 = 80;
 force force kat_breathing_staminaLossAtLowSPO2 = true;
@@ -1043,13 +1045,34 @@ kat_breathing_stethoscopeSoundVolume = 2;
 force force kat_breathing_TensionHemothoraxAlwaysVisible = false;
 
 // KAT - ADV Medical: Chemical
-force force kat_chemical_availGasmask = "'G_AirPurifyingRespirator_01_F', 'kat_mask_M50', 'kat_mask_M04'";
+force kat_chemical_availCBRNUniform = "'U_C_CBRN_Suit_01_Blue_F'";
+force kat_chemical_availGasmask = "'G_AirPurifyingRespirator_01_F', 'kat_mask_M50', 'kat_mask_M04'";
+force force kat_chemical_chlorine_onsetTime = 30;
+force force kat_chemical_cloudIdMemoryTime = 30;
+force force kat_chemical_contaminationTickInterval = 40;
+force force kat_chemical_deconActionTime = 8;
+force force kat_chemical_enableParticleEffects = true;
+force force kat_chemical_enableSmellHint = false;
 force force kat_chemical_gasmask_durability = 600;
-kat_chemical_gasMaskSoundVolume = 1;
-force force kat_chemical_infectionTime = 8;
+kat_chemical_gasMaskSoundVolume = 0;
+force force kat_chemical_m8PaperActionTime = 3;
+force force kat_chemical_m8PaperDisplayTime = 8;
 force force kat_chemical_maskStaminaLoss = false;
+force force kat_chemical_mustard_burnOnsetMax = 240;
+force force kat_chemical_mustard_burnOnsetMin = 100;
+force force kat_chemical_mustard_eyeOnsetMax = 100;
+force force kat_chemical_mustard_eyeOnsetMin = 40;
+force force kat_chemical_phosgene_onsetMax = 360;
+force force kat_chemical_phosgene_onsetMin = 120;
+force force kat_chemical_sarin_cardiacArrestTime = 90;
+force force kat_chemical_sarin_unconsciousTime = 60;
+force force kat_chemical_sarin_vomitTime = 30;
 force force kat_chemical_showPoisoning = true;
 force force kat_chemical_tearGasDropChance = 0;
+force force kat_chemical_vx_cardiacArrestTime = 240;
+force force kat_chemical_vx_cloudLifetime = 600;
+force force kat_chemical_vx_unconsciousTime = 120;
+force force kat_chemical_vx_vomitTime = 60;
 
 // KAT - ADV Medical: Circulation
 force force kat_circulation_abgEnable = false;
@@ -1281,32 +1304,32 @@ force force kat_pharma_weapon_sway_pervitin = true;
 
 // KAT - ADV Medical: Surgery
 force force kat_surgery_closedLocation = 0;
-force force kat_surgery_closedReduction_MedLevel = 0;
+force force kat_surgery_closedReduction_MedLevel = 1;
 force force kat_surgery_closedReductionFailChance = 10;
-force force kat_surgery_closedTime = 10;
-force force kat_surgery_compoundChance = 30;
-force force kat_surgery_enable_fracture = false;
+force force kat_surgery_closedTime = 15;
+force force kat_surgery_compoundChance = 0;
+force force kat_surgery_enable_fracture = true;
 force force kat_surgery_enable_selfCheckFracture = 1;
-force force kat_surgery_fractureCheck_MedLevel = 0;
-force force kat_surgery_fractureCheck_Time = 10;
-force force kat_surgery_incisionTime = 10;
-force force kat_surgery_intermediateTime = 8;
+force force kat_surgery_fractureCheck_MedLevel = 1;
+force force kat_surgery_fractureCheck_Time = 5;
+force force kat_surgery_incisionTime = 5;
+force force kat_surgery_intermediateTime = 5;
 force force kat_surgery_npwt_MedLevel = 2;
-force force kat_surgery_npwtLocation = 3;
+force force kat_surgery_npwtLocation = 0;
 force force kat_surgery_npwtTime = 20;
 force force kat_surgery_openTime = 15;
 force force kat_surgery_pericardialtap_MedLevel = 2;
-force force kat_surgery_pericardialtapLocation = 3;
+force force kat_surgery_pericardialtapLocation = 0;
 force force kat_surgery_pericardialtapTime = 8;
 force force kat_surgery_reboa_MedLevel = 2;
-force force kat_surgery_reboaLocation = 3;
+force force kat_surgery_reboaLocation = 0;
 force force kat_surgery_reboaTime = 8;
-force force kat_surgery_simpleChance = 15;
-force force kat_surgery_Surgery_ConsciousnessRequirement = 1;
-force force kat_surgery_surgicalAction_MedLevel = 0;
+force force kat_surgery_simpleChance = 60;
+force force kat_surgery_Surgery_ConsciousnessRequirement = 2;
+force force kat_surgery_surgicalAction_MedLevel = 2;
 force force kat_surgery_surgicalLocation = 0;
 force force kat_surgery_ultrasound_MedLevel = 2;
-force force kat_surgery_ultrasoundLocation = 3;
+force force kat_surgery_ultrasoundLocation = 0;
 force force kat_surgery_ultrasoundTime = 8;
 
 // KAT - ADV Medical: Vitals
@@ -1461,8 +1484,8 @@ force force TFAR_setting_externalIntercomWirelessHeadgear = "";
 force force TFAR_spectatorCanHearEnemyUnits = true;
 force force TFAR_spectatorCanHearFriendlies = true;
 force force TFAR_takingRadio = 0;
-force force TFAR_Teamspeak_Channel_Name = "OPS1 - In Operation (TFAR)";
-force force TFAR_Teamspeak_Channel_Password = "TFAR";
+force TFAR_Teamspeak_Channel_Name = "OPS1 - In Operation (TFAR)";
+force TFAR_Teamspeak_Channel_Password = "TFAR";
 force force TFAr_terrain_interception_coefficient = 7;
 force force TFAR_voiceCone = true;
 
@@ -1566,93 +1589,28 @@ force force zhc_stat_EnableFPSCounter = true;
 force force zhc_stat_MapFpsPos = 0;
 force force zhc_stat_RPTFreq = 15;
 
-//CLIENTSIDE OPTIONALS
-// Crows Zeus Additions
-crowsza_pingbox_CBA_Setting_enabled = true;
-crowsza_pingbox_CBA_Setting_fade_duration = 300;
-crowsza_pingbox_CBA_Setting_fade_enabled = true;
-crowsza_pingbox_CBA_Setting_oldLimit = 600;
-crowsza_pingbox_CBA_Setting_Pingbox_Size = 3;
-crowsza_pingbox_CBA_Setting_spamPing_threshold = 60;
-crowsza_zeus_text_CBA_Setting_OnKilledModule_helper = true;
-crowsza_zeus_text_CBA_Setting_OnKilledModule_helper_color = [1,1,1,1];
-crowsza_zeus_text_CBA_Setting_rc_helper = true;
-crowsza_zeus_text_CBA_Setting_rc_helper_color = [1,1,1,1];
-crowsza_zeus_text_CBA_Setting_surrender_helper = true;
-crowsza_zeus_text_CBA_Setting_surrender_helper_color = [1,1,1,1];
-crowsza_zeus_text_CBA_Setting_zeusTextLine1 = true;
-crowsza_zeus_text_CBA_Setting_zeusTextLine2 = true;
-crowsza_zeus_text_CBA_Setting_zeusTextLine3 = false;
 
-// Fawks' Enhanced NVGs
-PDT_ENVG_ACE = false;
-PDT_ENVG_Blacklist = "";
-PDT_ENVG_Effect = "";
-
-// Turret Enhanced
-force force Fat_Lurch_Grid = true;
-force force Fat_Lurch_GridNum = 6;
-force force Fat_Lurch_MapSlew = true;
-force force Fat_Lurch_Markers = true;
-force force Fat_Lurch_Measure = true;
-Fat_Lurch_ShowAz = true;
-Fat_Lurch_ShowEl = true;
-Fat_Lurch_ShowNorth = true;
-Fat_Lurch_ShowTarget = true;
-Marbit_MarkerBHColor = "ColorBlack";
-force force Marbit_MarkerBHEnabler = true;
-Marbit_MarkerFourColor = "ColorGreen";
-Marbit_MarkerFourEnabler = true;
-Marbit_MarkerFourIcon = "hd_dot";
-Marbit_MarkerFourLabel = "";
-Marbit_MarkerFourLabelPost = " ";
-force force Marbit_MarkerFourLabelPostCustom = false;
-Marbit_MarkerOneColor = "ColorRed";
-Marbit_MarkerOneEnabler = true;
-force force Marbit_MarkerOneIcon = "hd_dot";
-Marbit_MarkerOneLabel = "HM";
-Marbit_MarkerOneLabelPost = " ";
-Marbit_MarkerOneLabelPostCustom = false;
-Marbit_MarkerThreeColor = "ColorBlack";
-Marbit_MarkerThreeEnabler = true;
-force force Marbit_MarkerThreeIcon = "hd_dot";
-Marbit_MarkerThreeLabel = "";
-Marbit_MarkerThreeLabelPost = " ";
-Marbit_MarkerThreeLabelPostCustom = false;
-Marbit_MarkerTwoColor = "ColorBlue";
-Marbit_MarkerTwoEnabler = true;
-force force Marbit_MarkerTwoIcon = "hd_dot";
-Marbit_MarkerTwoLabel = "FM";
-Marbit_MarkerTwoLabelPost = " ";
-Marbit_MarkerTwoLabelPostCustom = false;
-Marbit_MarkerZeroColor = "ColorOrange";
-Marbit_MarkerZeroEnabler = true;
-force force Marbit_MarkerZeroIcon = "hd_dot";
-Marbit_MarkerZeroLabel = "HM";
-Marbit_MarkerZeroLabelPost = "";
-force force Marbit_sideMarkerCounterPre = 1;
-
-//APPROVED
+//APPROVED MODS
 // AI - CFP
 force force cfp_autoEquipNVG = true;
 
 // Crows Electronic Warfare
 crowsEW_main_zeus_jam_immune = true;
 crowsEW_main_zeus_jam_marker_show = true;
-force crowsEW_spectrum_defaultClassForJammingSignal = "UGV_01_base_F,UGV_02_Base_F,UAV_01_base_F,UAV_02_base_F,UAV_03_base_F,UAV_04_base_F,UAV_05_Base_F,UAV_06_base_F";
-force crowsEW_spectrum_defaultRangesForJammingSignal = "298,299,301,3002,3003,3004,3005,306";
-crowsEW_spectrum_minJamSigStrength = -40;
+force force crowsEW_spectrum_defaultClassForJammingSignal = "UGV_01_base_F,UGV_02_Base_F,UAV_01_base_F,UAV_02_base_F,UAV_03_base_F,UAV_04_base_F,UAV_05_Base_F,UAV_06_base_F,UK3CB_Seafox_Base,UK3CB_Ka137_Base,GX_BLACKHORNET_UAV_BASE,drone_base_F,ARMAFPV_Crocus_AT_Base,ARMAFPV_Crocus_AP_Base,GX_DRONE40_UAV_BASE,GX_HONEYBADGER_UGV_BASE,GX_MQ8B_UAV_BASE,GX_RQ11B_UAV_BASE,GX_THEMIS_UGV_BASE,GX_HUNTER_SP_UAV_BASE";
+force force crowsEW_spectrum_defaultRangesForJammingSignal = "298,299,301,3002,3003,3004,3005,306";
+crowsEW_spectrum_minJamSigStrength = -55;
 crowsEW_spectrum_selfTracking = false;
-crowsEW_spectrum_spectrumAutoline = true;
+force force crowsEW_spectrum_spectrumAutoline = false;
 crowsEW_spectrum_spectrumAutolineColor1 = 2;
 crowsEW_spectrum_spectrumAutolineColor2 = 7;
 crowsEW_spectrum_spectrumAutolineColor3 = 8;
 crowsEW_spectrum_spectrumAutolineColor4 = 5;
 crowsEW_spectrum_spectrumAutolineLength = 6000;
 crowsEW_spectrum_spectrumAutolineNoise = 0;
-crowsEW_spectrum_spectrumEnable = true;
-crowsEW_spectrum_tfarSideTrack = false;
-crowsEW_spectrum_UAVterminalUserVisibleInSpectrum = false;
+force force crowsEW_spectrum_spectrumEnable = true;
+force force crowsEW_spectrum_tfarSideTrack = true;
+force force crowsEW_spectrum_UAVterminalUserVisibleInSpectrum = true;
 
 // CUP
 CUP_CheckCfgPatches = false;
@@ -1713,6 +1671,9 @@ force force iedd_vbied_minRange = 5;
 force force iedd_vbied_plrCheck = true;
 force force iedd_vbied_vehCheck = true;
 
+// Mavic 3
+force force Mavic_Drop_Setting_allowedGrenades = "['Mavic_M67', 'Mavic_V40', 'Mavic_F1', 'Mavic_VOG25', 'Mavic_TBG', 'Mavic_M433', 'MiniGrenade', 'HandGrenade', 'ACE_M14', 'CUP_HandGrenade_L109A1_HE', 'CUP_HandGrenade_L109A2_HE', 'CUP_HandGrenade_M67', 'CUP_HandGrenade_RGO', 'CUP_HandGrenade_RGD5', 'rhs_mag_f1', 'rhs_mag_m67', 'rhs_mag_rgo', 'rhs_mag_rgn', 'rhs_mag_rgd5', 'rhs_grenade_mkii_mag', 'rhs_mag_an_m14_th3', 'rhsgref_mag_rkg3em', 'rhssaf_mag_br_m75', 'rhssaf_mag_br_m84', 'rhssaf_mag_brk_m79', 'rhssaf_mag_brz_m88', 'rhs_grenade_khattabka_vog17_mag', 'rhs_grenade_khattabka_vog25_mag', 'BWA3_DM51A1', 'rho_rar_handgrenade_f1' ]";
+
 // RR Immersive Maps
 force force RR_mapStuff_enableCompassAnimations = false;
 force force RR_mapStuff_enableMapAnimations = false;
@@ -1720,5 +1681,3 @@ force force RR_mapStuff_enableMapInteractions = true;
 
 // Vurtual's Vehicles
 force force vurtual_base_fording_damage = false;
-
-
