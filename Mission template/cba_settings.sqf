@@ -44,7 +44,7 @@ To enable the setting, remove the "//" (comment marker) at the start of the line
 
 
 
-/* The following settings are for clientside mods and are not available for change to mission makers. */
+/* The following settings are for clientside mods and are not available for change to mission makers. Changing these settings will result in a major correction being applied. */
 
 
 
