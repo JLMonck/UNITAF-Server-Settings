@@ -714,6 +714,23 @@ cba_quicktime_qteShorten = false;
 cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
 
+// Crows Zeus Additions
+crowsza_pingbox_CBA_Setting_enabled = true;
+crowsza_pingbox_CBA_Setting_fade_duration = 300;
+crowsza_pingbox_CBA_Setting_fade_enabled = true;
+crowsza_pingbox_CBA_Setting_oldLimit = 600;
+crowsza_pingbox_CBA_Setting_Pingbox_Size = 3;
+crowsza_pingbox_CBA_Setting_spamPing_threshold = 60;
+crowsza_zeus_text_CBA_Setting_OnKilledModule_helper = true;
+crowsza_zeus_text_CBA_Setting_OnKilledModule_helper_color = [1,1,1,1];
+crowsza_zeus_text_CBA_Setting_rc_helper = true;
+crowsza_zeus_text_CBA_Setting_rc_helper_color = [1,1,1,1];
+crowsza_zeus_text_CBA_Setting_surrender_helper = true;
+crowsza_zeus_text_CBA_Setting_surrender_helper_color = [1,1,1,1];
+crowsza_zeus_text_CBA_Setting_zeusTextLine1 = true;
+crowsza_zeus_text_CBA_Setting_zeusTextLine2 = true;
+crowsza_zeus_text_CBA_Setting_zeusTextLine3 = false;
+
 // DUI - Squad Radar - Indicators
 force force diwako_dui_indicators_crew_range_enabled = false;
 diwako_dui_indicators_fov_scale = false;
