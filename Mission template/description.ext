@@ -1,4 +1,4 @@
-/*/ DESCRIPTION.EXT
+/*/ DESCRIPTION.EXT V10.26
 
 Author:         United Task Force
 Outline:        The Description.ext is used to set the overall mission attributes
@@ -7,10 +7,10 @@ Documentation:  https://community.bistudio.com/wiki/Description.ext /*/
 
 // MISSION INFORMATION //
 
-author          = "Someone Else";
-onLoadName      = "THEATRE OP NAME";
-onLoadMission   = "Loading screen subtext";
-loadScreen      = "\UNITAF\textures\images\signage\ops_center\utf-banner.jpg";
+author          = " YOUR NAME HERE";                                                                  // Mission Makers Here
+onLoadName      = " OPERATION NAME HERE ";                                                    // Op Name here
+onLoadMission   = "";
+loadScreen      = "\UNITAF\textures\images\signage\ops_center\utf-banner.jpg";                     // File path to Loading Image
 skipLobby = 1;
 
 // ATTRIBUTES //
@@ -37,7 +37,7 @@ class Header
 // Discord Rich Presence
 class CfgDiscordRichPresence {
     applicationID           = "753242663616249906";   	// Provided by discord
-    defaultDetails          = "THEATRE OP NAME"; 	// Upper text
+    defaultDetails          = " OPERATION NAME HERE "; 	// Upper text                          OP Name here
     defaultState            = "unitedtaskforce.net";   	// Lower text  
     defaultLargeImageKey    = "unitaf";         	// Large image
     defaultLargeImageText   = "";                  	// Large image hover text
@@ -73,3 +73,4 @@ disableChannels[]={0,1,2,3,5};
 
 // For synced maps
 //disableChannels[]={0};
+
