@@ -937,13 +937,14 @@ force force grad_trenches_functions_vehicleEnvelopeRemovalTime = -1;
 force force grad_trenches_functions_vehicleTrenchBuildSpeed = 5;
 
 // Immersive Animations
-force force WBK_IA_C = true;
-force WBK_IA_Map = false; //Allow clientside enable
-force force WBK_IA_MapTime = false;
-force force WBK_IA_RAD = true;
-force force WBK_IA_TALK = false;
-force force WBK_IA_TP = true;
-force force WBK_IA_W = true;
+force force WBK_ImmersiveAnims_DisableMapTime = false;
+force force WBK_ImmersiveAnims_EnableCompass = true;
+force WBK_ImmersiveAnims_EnableMap = false;
+force force WBK_ImmersiveAnims_EnableRadioTalk = true;
+force force WBK_ImmersiveAnims_EnableTactPing = true;
+force force WBK_ImmersiveAnims_EnableTactPing_Anim = "wbk_tactialpinganimation";
+force force WBK_ImmersiveAnims_EnableTalk = false;
+force force WBK_ImmersiveAnims_EnableWatch = true;
 
 // Improved Melee System (Client Settings)
 IMS_CustomCamer_Y = 3;
